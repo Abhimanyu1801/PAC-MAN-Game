@@ -35,7 +35,7 @@ Ghosts navigate the maze in different ways. At first, they all scatter to one of
 Ghosts are unable to turn until they meet an intersection point, and they only think when there is a new direction to turn to. When a ghost enters an intersection point on the map (a "crossroad"), it asks the Maze which way to turn to get on the shortest path towards its destination. Cost of going from any tile A to tile B is precalculated in "Maze.cpp" file, inside Maze's constructor using Dijkstra Algorithm. Because Dijkstra Algorithm is one of the most common and efficient pathfinding algorithms, and we use it to determine the cost of getting from each point A to point B, and we store these resulting costs inside "int costs[][]". Knowing the costs is enough to know which way we need to turn. For instance, if we want to get to some point A from point B, and we know that costs[A][B] = x, then it's necessary that at least one of the neighbors of B (let's call it point C) satisfies the condition "costs[A][C] = x - 1", since going through neighbors is how we calculated the cost from A to B in the first place. Relying on this knowledge, ghosts ask the maze whichever side is cheapest and they take that route towards their destination point.
 
 
-/** ALL THE TEST CASES ARE PLACED INSIDE testing.cpp file**/
+
 
 
 
